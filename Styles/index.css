@@ -1,0 +1,14 @@
+        .code-block {
+            background-color: #f5f5f5;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+        }
+        .footer-custom {
+            background-color: #363636;
+            color: white;
+            padding: 2rem 1.5rem;
+        }
+        .box-content {
+            margin-bottom: 3rem;
+        }
