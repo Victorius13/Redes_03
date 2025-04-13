@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fundamentos de Redes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./Styles/index.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <strong>Fundamentos de Redes</strong>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-2 has-text-centered">Conceptos Básicos de Redes</h1>
+
+            <!-- Sección IPv4 -->
+            <div class="box box-content">
+                <h2 class="title is-4">IPv4</h2>
+                <ul>
+                    <li>Dirección de 32 bits (4 bytes)</li>
+                    <li>Formato decimal: 192.168.1.1</li>
+                    <li>Rango: 0.0.0.0 a 255.255.255.255</li>
+                    <li>Approx 4.3 mil millones de direcciones</li>
+                </ul>
+            </div>
+
+            <!-- Sección IPv6 -->
+            <div class="box box-content">
+                <h2 class="title is-4">IPv6</h2>
+                <ul>
+                    <li>Dirección de 128 bits (16 bytes)</li>
+                    <li>Formato hexadecimal: 2001:0db8:85a3:0000:0000:8a2e:0370:7334</li>
+                    <li>Capacidad: 3.4×10³⁸ direcciones</li>
+                    <li>Mejor seguridad y autoconfiguración</li>
+                </ul>
+            </div>
+
+            <!-- Tipos de direcciones IP -->
+            <div class="box box-content">
+                <h2 class="title is-4">Tipos de direcciones IP</h2>
+                <div class="content">
+                    <ul>
+                        <li><strong>Unicast:</strong> Dirección única para un dispositivo</li>
+                        <li><strong>Broadcast:</strong> Envía a todos los dispositivos en la red</li>
+                        <li><strong>Multicast:</strong> Envía a un grupo específico de dispositivos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conversión binario-decimal -->
+            <div class="box box-content">
+                <h2 class="title is-4">Conversión Binario-Decimal</h2>
+                <div class="code-block">
+                    <pre>Ejemplo: 1101.1011
+Cálculo:
+1*2³ + 1*2² + 0*2¹ + 1*2⁰ . 1*2⁻¹ + 0*2⁻² + 1*2⁻³ + 1*2⁻⁴
+= 8 + 4 + 0 + 1 = 13
+= 0.5 + 0 + 0.125 + 0.0625 = 0.6875
+Resultado: 13.6875</pre>
+                </div>
+                <table class="table is-bordered">
+                    <thead>
+                        <tr>
+                            <th>Binario</th>
+                            <th>Decimal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0000</td><td>0</td></tr>
+                        <tr><td>0001</td><td>1</td></tr>
+                        <tr><td>0010</td><td>2</td></tr>
+                        <tr><td>0100</td><td>4</td></tr>
+                        <tr><td>1000</td><td>8</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Suma binaria -->
+            <div class="box box-content">
+                <h2 class="title is-4">Suma Binaria</h2>
+                <div class="code-block">
+                    <pre>  1 1 1  (acarreos)
+    1 0 1 1  (11)
+  +   1 1 1  (7)
+  ---------
+  1 0 0 1 0  (18)</pre>
+                </div>
+                <p>Reglas: 0+0=0, 0+1=1, 1+1=0 con acarreo 1</p>
+            </div>
+
+            <!-- Ejemplos de conversión -->
+            <div class="box box-content">
+                <h2 class="title is-4">Ejemplos de Conversión</h2>
+                <div class="columns">
+                    <div class="column">
+                        <p><strong>Binario a Decimal:</strong><br>
+                        1010 = 1×8 + 0×4 + 1×2 + 0×1 = 10</p>
+                    </div>
+                    <div class="column">
+                        <p><strong>Decimal a Binario:</strong><br>
+                        25 = 16 + 8 + 1 = 11001</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-custom">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Victor Jerez</strong><br>
+                Cédula: 28.001.871<br>
+                <a href="mailto:victorjerezlara@gmail.com" class="has-text-white">victorjerezlara@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
