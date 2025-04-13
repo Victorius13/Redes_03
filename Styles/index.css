@@ -1,146 +1,46 @@
-    /* Animaciones */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
+        :root {
+            --pastel-blue: #A7C7E7;
+            --violet: #957DAD;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+
+        body {
+            background-color: #F8F9FA;
         }
-    }
 
-    /* Estilos generales */
-    body {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        min-height: 100vh;
-    }
+        .custom-header {
+            background-color: var(--metallic-gray);
+            color: white;
+        }
 
-    .title {
-        color: #2c3e50;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        animation: fadeInUp 0.8s ease-out;
-    }
+        .section-title {
+            color: var(--violet);
+            border-left: 4px solid var(--pastel-blue);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
 
-    .navbar {
-        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
+        .ip-box {
+            background-color: var(--pastel-blue);
+            border: 1px solid var(--violet);
+            margin-bottom: 1.5rem;
+        }
 
-    .navbar-item {
-        color: white !important;
-        transition: transform 0.3s ease;
-    }
+        .code-example {
+            background-color: var(--metallic-gray);
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
 
-    .navbar-item:hover {
-        transform: translateX(10px);
-    }
+        .class-box {
+            background-color: #E8E9EA;
+            border: 1px solid var(--metallic-gray);
+            margin: 1rem 0;
+        }
 
-    .box {
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid rgba(255,255,255,0.3);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        transition: all 0.3s ease;
-        animation: fadeInUp 0.8s ease-out forwards;
-    }
-
-    .box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-
-    .code-block {
-        background: #2d3436;
-        color: #dfe6e9;
-        padding: 1.5rem;
-        border-radius: 10px;
-        font-family: 'Courier New', monospace;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .code-block::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 3px;
-        height: 100%;
-        background: linear-gradient(180deg, #74b9ff, #a29bfe);
-    }
-
-    .table {
-        background: rgba(255,255,255,0.8);
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .table th {
-        background: #4b6cb7;
-        color: white !important;
-    }
-
-    .table td {
-        transition: background 0.3s ease;
-    }
-
-    .table tr:hover td {
-        background: rgba(75, 108, 183, 0.1);
-    }
-
-    .footer-custom {
-    background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
-    position: relative;
-    overflow: hidden;
-    color: white !important; /* Añade esta línea */
-}
-
-.footer-custom a {
-    color: white !important; /* Esto asegura que el enlace de email también sea blanco */
-}
-
-.footer-custom strong {
-    color: white !important; /* Esto asegura que el nombre se vea en blanco */
-}
-
-    .footer-custom::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(45deg, transparent 20%, rgba(255,255,255,0.1) 50%, transparent 80%);
-        animation: shine 4s infinite;
-    }
-
-    @keyframes shine {
-        0% { transform: rotate(45deg) translateX(-200%); }
-        100% { transform: rotate(45deg) translateX(200%); }
-    }
-
-    /* Efectos para títulos */
-    .title.is-4 {
-        position: relative;
-        padding-left: 20px;
-        color: #2c3e50;
-    }
-
-    .title.is-4::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 8px;
-        height: 80%;
-        background: linear-gradient(180deg, #74b9ff, #a29bfe);
-        border-radius: 4px;
-    }
-
-    /* Retrasos en animaciones */
-    .box:nth-child(1) { animation-delay: 0.2s; }
-    .box:nth-child(2) { animation-delay: 0.4s; }
-    .box:nth-child(3) { animation-delay: 0.6s; }
-    .box:nth-child(4) { animation-delay: 0.8s; }
+        .footer {
+            background-color: tomato;
+            color: white;
+            padding: 2rem;
+        }
