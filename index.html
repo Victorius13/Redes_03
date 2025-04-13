@@ -1,128 +1,491 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fundamentos de Redes</title>
+    <title>Guía de Redes - Direcciones IP</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./Styles/index.css">
 </head>
+
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar is-dark">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-                <strong>Fundamentos de Redes</strong>
-            </a>
+    <header class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Redes y Direcciones IP
+                </h1>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Contenido principal -->
-    <section class="section">
-        <div class="container">
-            <h1 class="title is-2 has-text-centered">Conceptos Básicos de Redes</h1>
-
-            <!-- Sección IPv4 -->
-            <div class="box box-content">
-                <h2 class="title is-4">IPv4</h2>
-                <ul>
-                    <li>Dirección de 32 bits (4 bytes)</li>
-                    <li>Formato decimal: 192.168.1.1</li>
-                    <li>Rango: 0.0.0.0 a 255.255.255.255</li>
-                    <li>Approx 4.3 mil millones de direcciones</li>
-                </ul>
-            </div>
-
-            <!-- Sección IPv6 -->
-            <div class="box box-content">
-                <h2 class="title is-4">IPv6</h2>
-                <ul>
-                    <li>Dirección de 128 bits (16 bytes)</li>
-                    <li>Formato hexadecimal: 2001:0db8:85a3:0000:0000:8a2e:0370:7334</li>
-                    <li>Capacidad: 3.4×10³⁸ direcciones</li>
-                    <li>Mejor seguridad y autoconfiguración</li>
-                </ul>
-            </div>
-
-            <!-- Tipos de direcciones IP -->
-            <div class="box box-content">
-                <h2 class="title is-4">Tipos de direcciones IP</h2>
+    <div class="container">
+        <section class="section">
+            <h1 class="title is-2 section-title">Direcciones IP</h1>
+            <div class="box ip-box">
                 <div class="content">
+                    <p>
+                        Una dirección IP (Internet Protocol) es una etiqueta numérica única que identifica de manera
+                        lógica y jerárquica a una interfaz conectada a una red, ya sea un ordenador, smartphone, o
+                        cualquier dispositivo que utilice el protocolo de internet. Cumple dos funciones
+                        principales: identificar la interfaz de red y proporcionar direccionamiento para su ubicación.
+                    </p>
+                    <p>
+                        Existen dos versiones principales:
+                    </p>
                     <ul>
-                        <li><strong>Unicast:</strong> Dirección única para un dispositivo</li>
-                        <li><strong>Broadcast:</strong> Envía a todos los dispositivos en la red</li>
-                        <li><strong>Multicast:</strong> Envía a un grupo específico de dispositivos</li>
+                        <li>
+                            <strong>IPv4</strong>: Define una dirección IP como un número de 32 bits, representado por
+                            cuatro números (entre 0-255) separados por puntos, permitiendo aproximadamente 4 mil
+                            millones de direcciones únicas.
+                        </li>
+                        <li>
+                            <strong>IPv6</strong>: Utiliza 128 bits, implementada desde mediados de los 2000 debido al
+                            agotamiento de direcciones IPv4.
+                        </li>
                     </ul>
                 </div>
             </div>
-
-            <!-- Conversión binario-decimal -->
-            <div class="box box-content">
-                <h2 class="title is-4">Conversión Binario-Decimal</h2>
-                <div class="code-block">
-                    <pre>Ejemplo: 1101.1011
-Cálculo:
-1*2³ + 1*2² + 0*2¹ + 1*2⁰ . 1*2⁻¹ + 0*2⁻² + 1*2⁻³ + 1*2⁻⁴
-= 8 + 4 + 0 + 1 = 13
-= 0.5 + 0 + 0.125 + 0.0625 = 0.6875
-Resultado: 13.6875</pre>
-                </div>
-                <table class="table is-bordered">
-                    <thead>
-                        <tr>
-                            <th>Binario</th>
-                            <th>Decimal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>0000</td><td>0</td></tr>
-                        <tr><td>0001</td><td>1</td></tr>
-                        <tr><td>0010</td><td>2</td></tr>
-                        <tr><td>0100</td><td>4</td></tr>
-                        <tr><td>1000</td><td>8</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Suma binaria -->
-            <div class="box box-content">
-                <h2 class="title is-4">Suma Binaria</h2>
-                <div class="code-block">
-                    <pre>  1 1 1  (acarreos)
-    1 0 1 1  (11)
-  +   1 1 1  (7)
-  ---------
-  1 0 0 1 0  (18)</pre>
-                </div>
-                <p>Reglas: 0+0=0, 0+1=1, 1+1=0 con acarreo 1</p>
-            </div>
-
-            <!-- Ejemplos de conversión -->
-            <div class="box box-content">
-                <h2 class="title is-4">Ejemplos de Conversión</h2>
-                <div class="columns">
-                    <div class="column">
-                        <p><strong>Binario a Decimal:</strong><br>
-                        1010 = 1×8 + 0×4 + 1×2 + 0×1 = 10</p>
-                    </div>
-                    <div class="column">
-                        <p><strong>Decimal a Binario:</strong><br>
-                        25 = 16 + 8 + 1 = 11001</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer footer-custom has-text-white">
-    <div class="content has-text-centered">
-        <p class="has-text-white">
-            <strong class="has-text-white">Victor Jerez</strong><br>
-            <span class="has-text-white">Cédula: 28.001.871</span><br>
-            <a href="mailto:victorjerezlara@gmail.com" class="has-text-white">victorjerezlara@gmail.com</a>
-        </p>
+        </section>
     </div>
-</footer>
+
+    <div class="container">
+        <section class="section">
+            <h2 class="title is-3 section-title">IP Pública y Privada</h2>
+            <div class="columns">
+                <div class="column">
+                    <div class="box ip-box">
+                        <h3 class="title is-4">IP Pública</h3>
+                        <ul>
+                            <li>Es una dirección única y accesible globalmente desde cualquier lugar del mundo.
+                            </li>
+                            <li>Asignada por los proveedores de servicios de internet (ISP).</li>
+                            <li>Su función principal es comunicarse fuera de la red privada, conectando la red privada a
+                                internet.</li>
+                            <li>Es visible para todos en internet, incluidos proveedores de servicios y sitios web.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box ip-box">
+                        <h3 class="title is-4">IP Privada</h3>
+                        <ul>
+                            <li>Es la dirección utilizada dentro de una red local (LAN).</li>
+                            <li>No puede ser accedida directamente desde internet, proporcionando seguridad adicional.
+                            </li>
+                            <li>Se encuentra en rangos específicos: 192.168.x.x, 10.x.x.x y 172.16.x.x a 172.31.x.x.
+                            </li>
+                            <li>Es asignada por el router a cada dispositivo conectado.</li>
+                            <li>Solo es visible para dispositivos dentro de la misma red privada.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box ip-box">
+                        <h3 class="title is-4">Tipos según asignación</h3>
+                        <ul>
+                            <li><strong>IP Fija:</strong> Dirección IP pública permanente, ideal para servidores que
+                                requieren
+                                acceso continuo.</li>
+                            <li><strong>IP Estática:</strong> Dirección IP privada permanente, asignada manualmente por
+                                el
+                                administrador de red.</li>
+                            <li><strong>IP Dinámica:</strong> Dirección temporal (pública o privada) asignada por un
+                                servidor
+                                DHCP, cambiando cada vez que el dispositivo se conecta a la red.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Suma Binaria -->
+    <div class="container">
+        <section class="section">
+            <h2 class="title is-3 section-title">Suma Binaria</h2>
+            <div class="box">
+                <div class="content">
+                    <h2>Suma Binaria</h2>
+                    <p>
+                        La suma binaria es una operación básica en el sistema binario que utiliza únicamente los
+                        dígitos 0 y 1. El proceso es el siguiente:
+                    </p>
+                    <ol>
+                        <li>Se comienza sumando los bits desde la derecha hacia la izquierda.</li>
+                        <li>Si la suma de dos bits es 0 o 1, se escribe el resultado debajo.</li>
+                        <li>Si la suma es 2 (1+1), se escribe 0 y se lleva 1 al siguiente bit de mayor peso.
+                        </li>
+                    </ol>
+                    <p><strong>Reglas básicas:</strong></p>
+                    <ul>
+                        <li>0 + 0 = 0</li>
+                        <li>0 + 1 = 1</li>
+                        <li>1 + 0 = 1</li>
+                        <li>1 + 1 = 10 (0 con acarreo de 1)</li>
+                    </ul>
+                    <p><strong>Ejemplo:</strong> Para sumar 1011 (11 en decimal) y 1101 (13 en decimal):</p>
+                    <pre>
+    <table class="box">
+        <tr>
+<td></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+        </tr>
+
+        <tr>
+            <td>+</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td colspan="5">-----------------</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>  
+</pre>
+                    <p>
+                        El resultado es 11000 en binario, equivalente a 24 en decimal, donde, desde el principio de la
+                        operacion estamos acarreando la unidad binaria que va sumandose hasta que al final suma 1 + 1 +
+                        1.
+                    </p>
+                </div>
+                <section class="box">
+                    <div>
+                        <img src="./Img/Tabla.jpg" alt="Tabla de Equivalencias">
+<p> Tal como muestra la tabla, el valor de la serie binaria estará dado por su posicion absoluta, es decir, que cada espacio que esté marcado por la unidad (1), tomará el valor de dicha posicion, siendo ese espacio el doble del valor del espacio anterior, se sumará el numero total de valores que tome cada espacio ocupado por la unidad, el resultado será la equivalencia a decimales.
+</p>
+                    </div>
+                </section>
+                <section class="box">
+                    <div>
+                        <p>Ahora, tenemos la siguiente suma binaria:</p>
+                    </div>
+                    <pre>
+                        <table class="box">
+<tr>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td></td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>+</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td colspan="8">------------------</td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+                        </table>
+                    </pre>
+<p>Para este caso, se dividirá la operacion en 2 partes de esta manera: <br>
+    <pre>
+(Fila 1 + Fila 2) + (Fila 3 + Fila 4).</pre>
+Es decir, se sumaran las filas en grupos de 2, luego, se sumaran ambos resultados.</p>
+ 
+<pre>
+<h4>Primera Parte:</h4>
+<table>
+    <thead>Fila 1 + Fila 2</thead>
+    <tr>
+       <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>(109)</td>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>(114)</td>
+    </tr>
+    <tr>
+        <td colspan="8">------------------</td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td colspan="2"><==(223)</td>
+    </tr>
+</table>
+
+<table>
+    <thead>Fila 3 + Fila 4</thead>
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>(93)</td>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>(62)</td>
+    </tr>
+    <tr>
+        <td colspan="8">------------------</td>
+    <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td colspan="2"><==(155)</td>
+    </tr>
+</table>
+</pre>
+
+<p>
+    Tomamos los resultados de las 2 operaciones (marcados con flechas) y se suman:
+</p>
+<pre>
+    <h4>Segunda Parte:</h4>
+    <table>
+        <thead>Resultado 1 + Resultado 2</thead>
+        <tr>
+           <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>(223)</td>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>(155)</td>
+        </tr>
+        <tr>
+            <td colspan="9">------------------</td>
+        <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td colspan="2"><==(378)</td>
+        </tr>
+    </table>
+</pre>
+<p>
+    De este modo ya hemos obtenido el resultado de esta suma de 4 numeros binarios,
+    a lo que se puede verificar que si es correcta.
+</p>
+<pre>
+
+</pre>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2 class="title is-3 section-title">Host y Red</h2>
+            <div class="box">
+                <div class="content">
+                    <!-- Host -->
+                    <article class="content">
+                        <h2>Host</h2>
+                        <p>
+                            Un host es cualquier dispositivo (computadora, smartphone, servidor, impresora)
+                            conectado a una red que tiene asignada una dirección IP única. Estos dispositivos pueden
+                            enviar y recibir datos a través de la red utilizando el protocolo de internet. Los hosts
+                            pueden ser clientes, servidores o ambos, dependiendo de su función en la red.
+                        </p>
+                    </article>
+
+                    <!-- Red -->
+                    <article class="content">
+                        <h2>Red</h2>
+                        <p>
+                            Una red es un conjunto de dispositivos interconectados que pueden comunicarse entre sí.
+                            Permite compartir recursos, transferir datos y establecer comunicación entre los
+                            dispositivos conectados. Las redes pueden clasificarse según su tamaño y alcance:
+                        </p>
+                        <ul>
+                            <li><strong>LAN (Red de Área Local):</strong> Red privada que conecta dispositivos en un
+                                área limitada como un hogar u oficina.</li>
+                            <li><strong>WAN (Red de Área Amplia):</strong> Red que conecta LANs separadas
+                                geográficamente, siendo Internet la WAN más grande.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2 class="title is-3 section-title">Clases de Red</h2>
+            <div>
+                <p>
+                    Las direcciones IPv4 se clasifican tradicionalmente en cinco clases (A–E), siendo las tres
+                    primeras (A, B y C) las más utilizadas para asignación regular:</p>
+            </div>
+
+            <div class="column">
+                <div class="class-box">
+                    <h4 class="title is-5 has-text-primary">Clase A</h4>
+                    <ul>
+                        <li><strong>Rango:</strong> 0.0.0.0 a 127.255.255.255 (primer octeto: 0-127)</li>
+                        <li><strong>Formato:</strong> Primer bit es 0</li>
+                        <li>8 bits para identificar la red y 24 bits para hosts</li>
+                        <li>Permite 126 redes con hasta 16,777,214 hosts por red</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="class-box">
+                    <h4 class="title is-5 has-text-primary">Clase B</h4>
+                    <ul>
+                        <li><strong>Rango:</strong> 128.0.0.0 a 191.255.255.255 (primer octeto: 128-191)</li>
+                        <li><strong>Formato:</strong> Primeros dos bits son 10</li>
+                        <li>16 bits para la red y 16 bits para hosts</li>
+                        <li>Permite 16,384 redes con hasta 65,534 hosts por red</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="class-box">
+                    <h4 class="title is-5 has-text-primary">Clase C</h4>
+                    <ul>
+                        <li><strong>Rango:</strong> 192.0.0.0 a 223.255.255.255 (primer octeto: 192-223)</li>
+                        <li><strong>Formato:</strong> Primeros tres bits son 110</li>
+                        <li>24 bits para la red y 8 bits para hosts</li>
+                        <li>Permite 2,097,152 redes con hasta 254 hosts por red</li>
+                    </ul>
+                </div>
+            </div>
+            <section>
+                <div>
+                    <p>
+                        Actualmente, estas clases han sido en gran parte reemplazadas por CIDR (Classless
+                        Inter-Domain Routing), que permite una asignación más flexible y eficiente de direcciones
+                        IP.
+                    </p>
+                </div>
+            </section>
+    </div>
+    </section>
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>© 2025 - UNEFA - Ingenieria De Sistemas - Redes</p>
+            <p>Estudiante: Victor Jerez C.I.: 28001871 <a href="mailto:victorjerezlara@gmail.com">"Email"</a></p>
+        </div>
+    </footer>
 </body>
+
 </html>
