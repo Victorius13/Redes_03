@@ -90,10 +90,19 @@
     }
 
     .footer-custom {
-        background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
-        position: relative;
-        overflow: hidden;
-    }
+    background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
+    position: relative;
+    overflow: hidden;
+    color: white !important; /* Añade esta línea */
+}
+
+.footer-custom a {
+    color: white !important; /* Esto asegura que el enlace de email también sea blanco */
+}
+
+.footer-custom strong {
+    color: white !important; /* Esto asegura que el nombre se vea en blanco */
+}
 
     .footer-custom::before {
         content: '';
